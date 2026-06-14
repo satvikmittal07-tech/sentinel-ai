@@ -105,7 +105,7 @@ export function useStore() {
   const [, setTick] = useState(0);
   useEffect(() => {
     const unsub = store.subscribe(() => setTick((t) => t + 1));
-    return () => { unsub; };
+    return () => { unsub(); };
   }, []);
   return { threats: store.threats, kpi: store.kpi };
 }
