@@ -9,8 +9,86 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThreatsRouteImport } from './routes/threats'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as RiskRouteImport } from './routes/risk'
+import { Route as ResponseRouteImport } from './routes/response'
+import { Route as PredictiveRouteImport } from './routes/predictive'
+import { Route as IntelRouteImport } from './routes/intel'
+import { Route as ForensicsRouteImport } from './routes/forensics'
+import { Route as DigitalTwinRouteImport } from './routes/digital-twin'
+import { Route as DemoRouteImport } from './routes/demo'
+import { Route as CopilotRouteImport } from './routes/copilot'
+import { Route as AttackMapRouteImport } from './routes/attack-map'
+import { Route as AiDetectionRouteImport } from './routes/ai-detection'
+import { Route as AgentsRouteImport } from './routes/agents'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ThreatsRoute = ThreatsRouteImport.update({
+  id: '/threats',
+  path: '/threats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RiskRoute = RiskRouteImport.update({
+  id: '/risk',
+  path: '/risk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResponseRoute = ResponseRouteImport.update({
+  id: '/response',
+  path: '/response',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PredictiveRoute = PredictiveRouteImport.update({
+  id: '/predictive',
+  path: '/predictive',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntelRoute = IntelRouteImport.update({
+  id: '/intel',
+  path: '/intel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForensicsRoute = ForensicsRouteImport.update({
+  id: '/forensics',
+  path: '/forensics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DigitalTwinRoute = DigitalTwinRouteImport.update({
+  id: '/digital-twin',
+  path: '/digital-twin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CopilotRoute = CopilotRouteImport.update({
+  id: '/copilot',
+  path: '/copilot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AttackMapRoute = AttackMapRouteImport.update({
+  id: '/attack-map',
+  path: '/attack-map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiDetectionRoute = AiDetectionRouteImport.update({
+  id: '/ai-detection',
+  path: '/ai-detection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgentsRoute = AgentsRouteImport.update({
+  id: '/agents',
+  path: '/agents',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +97,214 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agents': typeof AgentsRoute
+  '/ai-detection': typeof AiDetectionRoute
+  '/attack-map': typeof AttackMapRoute
+  '/copilot': typeof CopilotRoute
+  '/demo': typeof DemoRoute
+  '/digital-twin': typeof DigitalTwinRoute
+  '/forensics': typeof ForensicsRoute
+  '/intel': typeof IntelRoute
+  '/predictive': typeof PredictiveRoute
+  '/response': typeof ResponseRoute
+  '/risk': typeof RiskRoute
+  '/settings': typeof SettingsRoute
+  '/threats': typeof ThreatsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agents': typeof AgentsRoute
+  '/ai-detection': typeof AiDetectionRoute
+  '/attack-map': typeof AttackMapRoute
+  '/copilot': typeof CopilotRoute
+  '/demo': typeof DemoRoute
+  '/digital-twin': typeof DigitalTwinRoute
+  '/forensics': typeof ForensicsRoute
+  '/intel': typeof IntelRoute
+  '/predictive': typeof PredictiveRoute
+  '/response': typeof ResponseRoute
+  '/risk': typeof RiskRoute
+  '/settings': typeof SettingsRoute
+  '/threats': typeof ThreatsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agents': typeof AgentsRoute
+  '/ai-detection': typeof AiDetectionRoute
+  '/attack-map': typeof AttackMapRoute
+  '/copilot': typeof CopilotRoute
+  '/demo': typeof DemoRoute
+  '/digital-twin': typeof DigitalTwinRoute
+  '/forensics': typeof ForensicsRoute
+  '/intel': typeof IntelRoute
+  '/predictive': typeof PredictiveRoute
+  '/response': typeof ResponseRoute
+  '/risk': typeof RiskRoute
+  '/settings': typeof SettingsRoute
+  '/threats': typeof ThreatsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/agents'
+    | '/ai-detection'
+    | '/attack-map'
+    | '/copilot'
+    | '/demo'
+    | '/digital-twin'
+    | '/forensics'
+    | '/intel'
+    | '/predictive'
+    | '/response'
+    | '/risk'
+    | '/settings'
+    | '/threats'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/agents'
+    | '/ai-detection'
+    | '/attack-map'
+    | '/copilot'
+    | '/demo'
+    | '/digital-twin'
+    | '/forensics'
+    | '/intel'
+    | '/predictive'
+    | '/response'
+    | '/risk'
+    | '/settings'
+    | '/threats'
+  id:
+    | '__root__'
+    | '/'
+    | '/agents'
+    | '/ai-detection'
+    | '/attack-map'
+    | '/copilot'
+    | '/demo'
+    | '/digital-twin'
+    | '/forensics'
+    | '/intel'
+    | '/predictive'
+    | '/response'
+    | '/risk'
+    | '/settings'
+    | '/threats'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgentsRoute: typeof AgentsRoute
+  AiDetectionRoute: typeof AiDetectionRoute
+  AttackMapRoute: typeof AttackMapRoute
+  CopilotRoute: typeof CopilotRoute
+  DemoRoute: typeof DemoRoute
+  DigitalTwinRoute: typeof DigitalTwinRoute
+  ForensicsRoute: typeof ForensicsRoute
+  IntelRoute: typeof IntelRoute
+  PredictiveRoute: typeof PredictiveRoute
+  ResponseRoute: typeof ResponseRoute
+  RiskRoute: typeof RiskRoute
+  SettingsRoute: typeof SettingsRoute
+  ThreatsRoute: typeof ThreatsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/threats': {
+      id: '/threats'
+      path: '/threats'
+      fullPath: '/threats'
+      preLoaderRoute: typeof ThreatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/risk': {
+      id: '/risk'
+      path: '/risk'
+      fullPath: '/risk'
+      preLoaderRoute: typeof RiskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/response': {
+      id: '/response'
+      path: '/response'
+      fullPath: '/response'
+      preLoaderRoute: typeof ResponseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/predictive': {
+      id: '/predictive'
+      path: '/predictive'
+      fullPath: '/predictive'
+      preLoaderRoute: typeof PredictiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/intel': {
+      id: '/intel'
+      path: '/intel'
+      fullPath: '/intel'
+      preLoaderRoute: typeof IntelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forensics': {
+      id: '/forensics'
+      path: '/forensics'
+      fullPath: '/forensics'
+      preLoaderRoute: typeof ForensicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/digital-twin': {
+      id: '/digital-twin'
+      path: '/digital-twin'
+      fullPath: '/digital-twin'
+      preLoaderRoute: typeof DigitalTwinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/copilot': {
+      id: '/copilot'
+      path: '/copilot'
+      fullPath: '/copilot'
+      preLoaderRoute: typeof CopilotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/attack-map': {
+      id: '/attack-map'
+      path: '/attack-map'
+      fullPath: '/attack-map'
+      preLoaderRoute: typeof AttackMapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-detection': {
+      id: '/ai-detection'
+      path: '/ai-detection'
+      fullPath: '/ai-detection'
+      preLoaderRoute: typeof AiDetectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agents': {
+      id: '/agents'
+      path: '/agents'
+      fullPath: '/agents'
+      preLoaderRoute: typeof AgentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +317,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgentsRoute: AgentsRoute,
+  AiDetectionRoute: AiDetectionRoute,
+  AttackMapRoute: AttackMapRoute,
+  CopilotRoute: CopilotRoute,
+  DemoRoute: DemoRoute,
+  DigitalTwinRoute: DigitalTwinRoute,
+  ForensicsRoute: ForensicsRoute,
+  IntelRoute: IntelRoute,
+  PredictiveRoute: PredictiveRoute,
+  ResponseRoute: ResponseRoute,
+  RiskRoute: RiskRoute,
+  SettingsRoute: SettingsRoute,
+  ThreatsRoute: ThreatsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
