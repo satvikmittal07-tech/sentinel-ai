@@ -9,79 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ThreatsRouteImport } from './routes/threats'
-import { Route as SettingsRouteImport } from './routes/settings'
-import { Route as RiskRouteImport } from './routes/risk'
-import { Route as ResponseRouteImport } from './routes/response'
-import { Route as PredictiveRouteImport } from './routes/predictive'
-import { Route as IntelRouteImport } from './routes/intel'
-import { Route as ForensicsRouteImport } from './routes/forensics'
-import { Route as DigitalTwinRouteImport } from './routes/digital-twin'
-import { Route as DemoRouteImport } from './routes/demo'
-import { Route as CopilotRouteImport } from './routes/copilot'
-import { Route as AttackMapRouteImport } from './routes/attack-map'
-import { Route as AiDetectionRouteImport } from './routes/ai-detection'
-import { Route as AgentsRouteImport } from './routes/agents'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgentsRouteImport } from './routes/agents'
+import { Route as AiDetectionRouteImport } from './routes/ai-detection'
+import { Route as AttackMapRouteImport } from './routes/attack-map'
+import { Route as CopilotRouteImport } from './routes/copilot'
+import { Route as DemoRouteImport } from './routes/demo'
+import { Route as DigitalTwinRouteImport } from './routes/digital-twin'
+import { Route as ForensicsRouteImport } from './routes/forensics'
+import { Route as IntelRouteImport } from './routes/intel'
+import { Route as PredictiveRouteImport } from './routes/predictive'
+import { Route as ResponseRouteImport } from './routes/response'
+import { Route as RiskRouteImport } from './routes/risk'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as ThreatsRouteImport } from './routes/threats'
 
-const ThreatsRoute = ThreatsRouteImport.update({
-  id: '/threats',
-  path: '/threats',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SettingsRoute = SettingsRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RiskRoute = RiskRouteImport.update({
-  id: '/risk',
-  path: '/risk',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResponseRoute = ResponseRouteImport.update({
-  id: '/response',
-  path: '/response',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PredictiveRoute = PredictiveRouteImport.update({
-  id: '/predictive',
-  path: '/predictive',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IntelRoute = IntelRouteImport.update({
-  id: '/intel',
-  path: '/intel',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ForensicsRoute = ForensicsRouteImport.update({
-  id: '/forensics',
-  path: '/forensics',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DigitalTwinRoute = DigitalTwinRouteImport.update({
-  id: '/digital-twin',
-  path: '/digital-twin',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoRoute = DemoRouteImport.update({
-  id: '/demo',
-  path: '/demo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CopilotRoute = CopilotRouteImport.update({
-  id: '/copilot',
-  path: '/copilot',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AttackMapRoute = AttackMapRouteImport.update({
-  id: '/attack-map',
-  path: '/attack-map',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AiDetectionRoute = AiDetectionRouteImport.update({
-  id: '/ai-detection',
-  path: '/ai-detection',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgentsRoute = AgentsRouteImport.update({
@@ -89,9 +34,64 @@ const AgentsRoute = AgentsRouteImport.update({
   path: '/agents',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AiDetectionRoute = AiDetectionRouteImport.update({
+  id: '/ai-detection',
+  path: '/ai-detection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AttackMapRoute = AttackMapRouteImport.update({
+  id: '/attack-map',
+  path: '/attack-map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CopilotRoute = CopilotRouteImport.update({
+  id: '/copilot',
+  path: '/copilot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DigitalTwinRoute = DigitalTwinRouteImport.update({
+  id: '/digital-twin',
+  path: '/digital-twin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForensicsRoute = ForensicsRouteImport.update({
+  id: '/forensics',
+  path: '/forensics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntelRoute = IntelRouteImport.update({
+  id: '/intel',
+  path: '/intel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PredictiveRoute = PredictiveRouteImport.update({
+  id: '/predictive',
+  path: '/predictive',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResponseRoute = ResponseRouteImport.update({
+  id: '/response',
+  path: '/response',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RiskRoute = RiskRouteImport.update({
+  id: '/risk',
+  path: '/risk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThreatsRoute = ThreatsRouteImport.update({
+  id: '/threats',
+  path: '/threats',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -214,88 +214,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/threats': {
-      id: '/threats'
-      path: '/threats'
-      fullPath: '/threats'
-      preLoaderRoute: typeof ThreatsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/settings': {
-      id: '/settings'
-      path: '/settings'
-      fullPath: '/settings'
-      preLoaderRoute: typeof SettingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/risk': {
-      id: '/risk'
-      path: '/risk'
-      fullPath: '/risk'
-      preLoaderRoute: typeof RiskRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/response': {
-      id: '/response'
-      path: '/response'
-      fullPath: '/response'
-      preLoaderRoute: typeof ResponseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/predictive': {
-      id: '/predictive'
-      path: '/predictive'
-      fullPath: '/predictive'
-      preLoaderRoute: typeof PredictiveRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/intel': {
-      id: '/intel'
-      path: '/intel'
-      fullPath: '/intel'
-      preLoaderRoute: typeof IntelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/forensics': {
-      id: '/forensics'
-      path: '/forensics'
-      fullPath: '/forensics'
-      preLoaderRoute: typeof ForensicsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/digital-twin': {
-      id: '/digital-twin'
-      path: '/digital-twin'
-      fullPath: '/digital-twin'
-      preLoaderRoute: typeof DigitalTwinRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo': {
-      id: '/demo'
-      path: '/demo'
-      fullPath: '/demo'
-      preLoaderRoute: typeof DemoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/copilot': {
-      id: '/copilot'
-      path: '/copilot'
-      fullPath: '/copilot'
-      preLoaderRoute: typeof CopilotRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/attack-map': {
-      id: '/attack-map'
-      path: '/attack-map'
-      fullPath: '/attack-map'
-      preLoaderRoute: typeof AttackMapRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ai-detection': {
-      id: '/ai-detection'
-      path: '/ai-detection'
-      fullPath: '/ai-detection'
-      preLoaderRoute: typeof AiDetectionRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/agents': {
@@ -305,11 +228,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AgentsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/ai-detection': {
+      id: '/ai-detection'
+      path: '/ai-detection'
+      fullPath: '/ai-detection'
+      preLoaderRoute: typeof AiDetectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/attack-map': {
+      id: '/attack-map'
+      path: '/attack-map'
+      fullPath: '/attack-map'
+      preLoaderRoute: typeof AttackMapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/copilot': {
+      id: '/copilot'
+      path: '/copilot'
+      fullPath: '/copilot'
+      preLoaderRoute: typeof CopilotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/digital-twin': {
+      id: '/digital-twin'
+      path: '/digital-twin'
+      fullPath: '/digital-twin'
+      preLoaderRoute: typeof DigitalTwinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forensics': {
+      id: '/forensics'
+      path: '/forensics'
+      fullPath: '/forensics'
+      preLoaderRoute: typeof ForensicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/intel': {
+      id: '/intel'
+      path: '/intel'
+      fullPath: '/intel'
+      preLoaderRoute: typeof IntelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/predictive': {
+      id: '/predictive'
+      path: '/predictive'
+      fullPath: '/predictive'
+      preLoaderRoute: typeof PredictiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/response': {
+      id: '/response'
+      path: '/response'
+      fullPath: '/response'
+      preLoaderRoute: typeof ResponseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/risk': {
+      id: '/risk'
+      path: '/risk'
+      fullPath: '/risk'
+      preLoaderRoute: typeof RiskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/threats': {
+      id: '/threats'
+      path: '/threats'
+      fullPath: '/threats'
+      preLoaderRoute: typeof ThreatsRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -334,3 +334,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
